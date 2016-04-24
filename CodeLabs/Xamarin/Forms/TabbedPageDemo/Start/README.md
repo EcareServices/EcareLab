@@ -99,5 +99,4 @@ Open `MainPage.cs` and add a DashBoard field, then add the dashboard page as **f
 ```
 Run the project. You should have three tabs. The dashboard tab buttons should also navigate to the configured tabs.
 
-
-If you have any problems, check the completed version 
+If you have any problems, check out the [Completed version](https://github.com/EcareServices/EcareLab/tree/master/CodeLabs/Xamarin/Forms/TabbedPageDemo/Completed).
