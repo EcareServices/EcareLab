@@ -222,3 +222,6 @@ Wire the save and delete click events to the repository
             Navigation.PopAsync();
         }
 ```
+Run the project. You should be able to create, alter, check and delete items on the todo list.
+
+If you have any problems, check out the [Completed version](https://github.com/EcareServices/EcareLab/tree/master/CodeLabs/Xamarin/Forms/TabbedPageDemo/Completed). 
