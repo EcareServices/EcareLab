@@ -1,7 +1,7 @@
 # EcareLab
 Code labs voor Lunch &amp; Learn
 
-Onderwerpen om te behandelen
+Toekomstige code labs
 
 -	Xamarin.Forms: Databinding
 -	Xamarin.Forms: Styling
