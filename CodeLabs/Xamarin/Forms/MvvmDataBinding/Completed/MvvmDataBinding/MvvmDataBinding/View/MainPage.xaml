@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:service="clr-namespace:MvvmDataBinding.Service;assembly=MvvmDataBinding"
+             x:Class="MvvmDataBinding.Pages.MainPage">
+  <StackLayout Padding="30">
+    <Label Text="Phonebook" Font="32"></Label>
+    <service:InfiniteListView x:Name="PersonList" 
+              ItemsSource="{Binding Persons}"
+              ItemTapped="PersonList_OnItemTapped"
+              LoadMoreCommand="{Binding LoadPersonsCommand}" RowHeight="100">
+      <service:InfiniteListView.ItemTemplate>
+        <DataTemplate> 
+          <ViewCell>
+            <StackLayout Padding="10" >
+              <Label Text="{Binding FullName}"></Label>
+              <Label Text="{Binding Email}" Font="10"></Label>
+              <Label Text="{Binding Phone}"></Label>
+            </StackLayout>
+          </ViewCell>  
+        </DataTemplate>
+      </service:InfiniteListView.ItemTemplate>
+    </service:InfiniteListView>
+  </StackLayout>
+</ContentPage>
