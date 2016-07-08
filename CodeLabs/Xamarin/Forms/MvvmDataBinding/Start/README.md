@@ -97,7 +97,7 @@ Open the `MainPage.xaml` markup. And add the following snippet:
 ```xml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MvvmDataBinding.Pages.MainPage">
+             x:Class="MvvmDataBinding.View.MainPage">
   <StackLayout Padding="30">
     <Label Text="Phonebook" Font="32"></Label>
     <ListView x:Name="PersonList" 
