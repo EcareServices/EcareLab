@@ -177,7 +177,7 @@ And in the constructor bind the command to the `LoadPersons()` method.
 Now wire up the LoadMore binding of the InfiniteListView `MainPage.xaml`. After ItemTapped add the LoadMore.
 
 ```xml
-	LoadMoreCommand="{Binding LoadCharactersCommand}"
+	LoadMoreCommand="{Binding LoadPersonsCommand}"
 ```
 
 Run the project. The list should scroll infinite. 
