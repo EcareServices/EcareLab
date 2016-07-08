@@ -1,4 +1,4 @@
-# MVVM Data binding ListView en infinite scroll
+# MVVM Data binding ListView and infinite scroll
 
 ## The project
 
