@@ -1,0 +1,45 @@
+﻿@model List<FullTextSearch.Models.WikiReference>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Search wiki</title>
+</head>
+<body>
+<div style="padding: 24px;">
+    @using(Html.BeginForm("POST", "Home", "Post")){
+    <fieldset>
+        <legend>Full text search</legend>
+        <div>
+            @Html.TextBox("SearchQuery", Request.Form["SearchQuery"])
+            <input type="submit" value="Search"/>
+        </div>
+    </fieldset>
+    }
+
+    @if (Model != null) {
+        <table>
+            <thead>
+                <tr>
+                    <td>Title</td>
+                    <td>Url</td>
+                </tr>
+            </thead>
+            <tbody>
+        @foreach (var wikiReference in Model) {
+                <tr>
+                    <td>@wikiReference.Title</td>
+                    <td><a href="@wikiReference.Url" target="_blank">Open page</a></td>
+                </tr>
+        }
+            </tbody>
+        </table>
+    }
+</div>
+</body>
+</html>
