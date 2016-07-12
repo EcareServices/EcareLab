@@ -8,7 +8,7 @@ Go to the web.config and add a valid connectionstring for `WikiConnection` with 
 
 Go to the `Package Manager Console` and run the command `update-database` to create and seed the database.
 
-The database has one table `WikiReferences` with wikipedia url, title and text content. 
+The database has one table `WikiReferences` with columns url, title and text content. 
 
 ## Set up full text search
 
@@ -20,7 +20,7 @@ First we need are going to create a full text catalog. Execute the following com
 CREATE FULLTEXT CATALOG ftCatalog AS DEFAULT;
 ```
 
-The catalog should be visible in SSMS explorer in 'WikiReferences/Storage/Full Text Catalogs'.
+The catalog should be visible in the SSMS explorer in `WikiReferences/Storage/Full Text Catalogs`.
 
 Now we are going to add a Full Text Index on the `Content` column of the `WikiReferences` table. In the query window execute the following command:
 
