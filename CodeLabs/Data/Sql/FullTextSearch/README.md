@@ -57,14 +57,12 @@ WHERE CONTAINS (Content, '"rijksm*"' )
 But what you properbly want is sort on the ranking. This kan be done using a join on `CONTAINSTABLE`.
 
 ```sql
-SELECT r.Id, t.Title, KEY_TBL.RANK   
+SELECT r.Id, r.Title, KEY_TBL.RANK   
 FROM WikiReferences r 
 	JOIN CONTAINSTABLE(WikiReferences, Content, 'onmiddellijk OR terugkeer OR heerser' ) AS KEY_TBL  
 		ON r.Id = KEY_TBL.[KEY]  
 ORDER BY KEY_TBL.RANK DESC 
 ```
-
-Check out more on :[Query with Full-Text Search on MSDN](https://msdn.microsoft.com/en-us/library/ms142583.aspx)
 
 You can also check the status of the index using this command:
 
@@ -77,6 +75,8 @@ You can also see what is inside a index:
 ```sql
 SELECT * FROM sys.dm_fts_index_keywords( DB_ID('WikiReferences'), OBJECT_ID('WikiReferences'))
 ```
+
+Check out more on :[Query with Full-Text Search on MSDN](https://msdn.microsoft.com/en-us/library/ms142583.aspx)
 
 ## Simple example Full Text search with Entity Framework
 
